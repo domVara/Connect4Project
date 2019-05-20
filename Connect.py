@@ -59,13 +59,7 @@ def main():
             column = input("column: ")
             c.insertValue(int(column),index)
         else:
-            # state = [[0., 0., 0., 0., 0., 0.],
-            #          [0., 0., 0., 0., 0., 0.],
-            #          [0., 0., 0., 0., 0., 0.],
-            #          [0., 0., 0., 0., 0., 0.],
-            #          [0., 0., 0., 0., 0., 0.],
-            #          [1., 1., 0., 0., 2., 0.],
-            #          [1., 1., 2., 0., 2., 0.]]
+
 
             c.insertValue(agent.insertValue(c.array),index)
             #column = input("column: ")
