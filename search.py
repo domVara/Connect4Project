@@ -44,9 +44,8 @@ class Search:
                          [0., 0., 1., 2,  2., 0.],
                          [0., 0., 2., 1., 1., 0.]])
         numpy.flip(state,0)
-        print(self.IDDFS(state,6))
+        self.IDDFS(state,6)
         print(self.found)
-        self.findInsertedValue(state,self.found)
 
 
     def checkWin(self,state):
@@ -82,7 +81,6 @@ class Search:
         if(self.checkWin(treeNode.state)):
             current = treeNode
             while(current.parent != None):
-                print(current.parent.state)
                 current = current.parent
                 self.found.append(current.state)
             return True
@@ -112,8 +110,7 @@ class Search:
         return False
 
     def findInsertedValue(self,initialState, changeState):
-        newState = initialState[len(changeState)-1]
-        print(newState)
+
         for i in range(7):
             for j in range(6):
                 if(initialState[i][j] != newState[i][j]):
